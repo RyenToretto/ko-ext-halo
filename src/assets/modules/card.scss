@@ -1,0 +1,36 @@
+@use '../common/index.scss' as *;
+
+.do-card {
+  @include baseCard();
+  > .hd {
+    box-sizing: content-box;
+    padding: 12px $gap 0;
+    line-height: 32px;
+    position: relative;
+    &.bordered {
+      border-bottom: 1px solid $border-color-light;
+      padding-bottom: 12px;
+    }
+    .title {
+      font-size: 14px;
+      font-weight: 700;
+      color: $font-color-dark;
+    }
+    > .right {
+      position: absolute;
+      right: 0;
+      top: 0;
+      padding: inherit inherit inherit $gap;
+    }
+  }
+  > .bd {
+    padding: 12px $gap;
+  }
+  > .ft {
+    padding: 0 $gap $gap;
+    &.bordered {
+      border-top: 1px solid $border-color-light;
+      padding-top: 12px;
+    }
+  }
+}

@@ -1,0 +1,156 @@
+@use '../common/index.scss' as *;
+
+.do-tag {
+  box-sizing: border-box;
+  padding: 3px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  > span {
+    box-sizing: border-box;
+    padding: 0 9px;
+    height: 24px;
+    border-radius: 4px;
+    border: 1px solid transparent;
+    background-color: #f0f2f5;
+    color: #909399;
+    font-size: 12px;
+    line-height: 1;
+    white-space: nowrap;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    transition:
+      background-color 0.3s linear,
+      border-color 0.3s linear;
+    .ico-delete,
+    .ico-edit,
+    .el-icon-delete {
+      margin-left: 5px;
+      color: #e6a23c;
+      cursor: pointer;
+      transition: color 0.3s linear;
+      &:hover {
+        color: #f56c6c;
+      }
+    }
+  }
+  &:hover {
+    > span {
+      background-color: #f5f7fa;
+    }
+  }
+  &.ico-add {
+    > span {
+      min-width: 38px;
+      color: #e6a23c;
+      background-color: #fdf6ec;
+      border-color: #f5dab1;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      > span {
+        box-sizing: border-box;
+        width: 14px;
+        height: 14px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-1px);
+      }
+    }
+  }
+  &.ico-blue {
+    > span {
+      min-width: 38px;
+      color: #409eff;
+      background-color: #f4f8ff;
+      border-color: #d1e6ff;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
+      cursor: pointer;
+      > span {
+        box-sizing: border-box;
+        width: 14px;
+        height: 14px;
+        font-size: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transform: translateY(-1px);
+      }
+    }
+  }
+  &.dark-tag {
+    > span {
+      background-color: #38475c;
+      color: #fff;
+    }
+    &.ico-add {
+      > span {
+        background-color: #81715a;
+      }
+    }
+  }
+  &.fixed-ctl {
+    padding: 17px 12px;
+    position: relative;
+    > span {
+      > .fixed-control {
+        position: fixed;
+        right: -9999px;
+        top: -9999px;
+        opacity: 0;
+        transition: opacity 0.3s linear;
+        &.can-see {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          opacity: 1;
+        }
+      }
+    }
+    &:hover {
+      > span {
+        > .fixed-control {
+          position: absolute;
+          right: 20px;
+          top: 0;
+          opacity: 1;
+        }
+      }
+    }
+  }
+  &.with-lang {
+    > span {
+      height: auto;
+      .name-column {
+        padding: 4px 0;
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: flex-start;
+        line-height: 1.2;
+        > span {
+          display: inline-block;
+          box-sizing: border-box;
+          max-width: 140px;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+        }
+      }
+      .ctl-column {
+        width: 24px;
+        height: 24px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+    }
+  }
+}

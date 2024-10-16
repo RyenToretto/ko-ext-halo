@@ -1,0 +1,281 @@
+@use '../common/index.scss' as *;
+
+.do-dialog-wrapper {
+  display: inline-block;
+  &.do-disabled {
+    .do-dialog-ctl {
+      .el-button {
+        color: #bcbec2;
+        background-color: #f4f4f5;
+        border-color: #e9e9eb;
+        cursor: not-allowed;
+      }
+    }
+  }
+}
+
+.do-full-dialog {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+  .el-overlay-dialog {
+    box-sizing: border-box;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    .el-dialog {
+      flex: 1;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      .el-dialog__body {
+        flex: 1;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+      }
+      .do-dialog-footer {
+        margin-top: 0;
+      }
+      &.mini-gap {
+        margin: 50px auto 24px;
+      }
+    }
+  }
+
+  .do-dialog__content {
+    box-sizing: border-box;
+    padding: 0 20px;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .do-dialog__view {
+    box-sizing: border-box;
+    flex: 1;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+  }
+  .do-dialog__scroller {
+    box-sizing: border-box;
+    overflow: auto;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    position: relative;
+    @include doScrollbar(4px, 4px);
+  }
+}
+
+.do-dialog-box {
+  padding: 0;
+  .el-dialog__header {
+    padding: 20px 20px 10px;
+    .el-dialog__title {
+      display: block;
+      box-sizing: border-box;
+      padding-right: 30px;
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      &.flex-y-center {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+    }
+  }
+  .el-dialog__body {
+    padding: 5px;
+    .el-row {
+      > .el-col:first-child {
+        padding-right: 0 !important;
+      }
+    }
+    .el-form-item {
+      box-sizing: border-box;
+    }
+    .do-dialog-content-box {
+      padding: 0 20px;
+      box-sizing: border-box;
+      width: 100%;
+      position: relative;
+      --do-form-split-gap: 18px;
+      --do-form-split-color: rgba(60, 60, 60, 0.29);
+      .do-form-split {
+        box-sizing: border-box;
+        width: 100%;
+        height: calc(var(--do-form-split-gap) * 2);
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+        > div {
+          width: 100%;
+          border: 0 dashed var(--do-form-split-color);
+          border-bottom-width: 1px;
+        }
+      }
+      .do-form-section {
+        display: flex;
+        justify-content: flex-start;
+        align-items: stretch;
+        position: relative;
+        .do-form-left {
+          box-sizing: border-box;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+        }
+        .do-form-split {
+          box-sizing: border-box;
+          width: calc(var(--do-form-split-gap) * 2);
+          height: unset;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: stretch;
+          > div {
+            width: 1px;
+            border-right-width: 1px;
+          }
+        }
+        .do-form-right {
+          box-sizing: border-box;
+          flex: 1;
+          display: flex;
+          flex-direction: column;
+          justify-content: flex-start;
+          align-items: stretch;
+        }
+      }
+    }
+    .do-dialog-footer {
+      padding: 16px;
+      margin-top: 12px;
+      box-sizing: border-box;
+      min-height: 48px;
+      background: #f0f0f0;
+      position: relative;
+      .do-dialog-bottom-btn {
+        position: absolute;
+        top: 50%;
+        right: 20px;
+        transform: translateY(-50%);
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        .el-button--small {
+          min-width: 68px;
+        }
+      }
+    }
+  }
+  &.hide {
+    background-color: transparent;
+    box-shadow: none;
+    .el-dialog__header {
+      display: none;
+    }
+    .el-dialog__body {
+      .do-dialog-footer {
+        display: none;
+      }
+    }
+  }
+  &.is-fullscreen {
+    background-color: #f8f8fa;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    .el-dialog__header {
+      .el-dialog__title {
+        font-size: 24px;
+        > .tips {
+          margin-left: 5px;
+          font-size: 18px;
+          font-weight: 600;
+        }
+      }
+      .el-dialog__headerbtn {
+        font-size: 24px;
+        height: 30px;
+        position: fixed;
+        z-index: 10;
+      }
+    }
+    .el-dialog__body {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: stretch;
+      .do-dialog-content-box {
+        flex: 1;
+      }
+    }
+  }
+  &.reader-dialog {
+    background-color: #e6e3d9;
+    .el-dialog__body {
+      .do-dialog-footer {
+        border-radius: 4px;
+        background: #f4f1e9;
+      }
+    }
+  }
+  &.table-dialog {
+    background-color: #f8f8fa;
+    .el-dialog__body {
+      .do-dialog-footer {
+        background-color: #f8f8fa;
+      }
+    }
+  }
+  &.dark-dialog {
+    background-color: #000;
+    .el-dialog__body {
+      .do-dialog-footer {
+        border-radius: 4px;
+        background: #000;
+      }
+    }
+  }
+}
+
+.custom-dialog {
+  box-sizing: border-box;
+  padding: 5px;
+  width: 100%;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px rgba(0, 0, 0, 0.3);
+  background-color: #ffffff;
+  flex: 1;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: stretch;
+}

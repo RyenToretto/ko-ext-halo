@@ -1,0 +1,52 @@
+// ====colors
+// $primary-color: #409eff;
+$primary-color: #3376de;
+$yellow: #fe880b;
+$green: #67c23a;
+$red: #ff4040;
+$color-warning: $yellow;
+$color-warning-light: #fffbe6;
+
+// ====bg
+$bg-lightest: #f8f8fa; // f9faff
+$bg-darkest: #333;
+
+// ====fonts
+$font-color-dark: #262626;
+$font-color-base: #404040;
+$font-color-light: #595959; // rgba(0,0,0,0.65)
+$font-color-lighter: #aaa;
+$font-family: var(--base-font-family);
+$link-color: #3376de;
+
+// ====border
+$border-color-base: #ebeef5;
+$border-color-light: #f0f0f0;
+$input-border-color: #e7effb;
+
+// ====layout
+$side-bar-width: 196px;
+$wrapper-width: 1280px;
+$wrapper-width-max: 1920px;
+
+$gap-xs: 8px;
+$gap-s: 16px;
+$gap: 24px;
+$gap-l: 32px;
+$gap-xl: 40px;
+
+$header-height: 60px;
+$footer-height: 40px;
+
+// ====table
+$sub-table-background: #fcfcfc;
+$sub-table-header-color: #bfc5d2;
+$table-resize-proxy-border: 1px dashed $primary-color;
+
+// ====form
+$default-input-width: 194px;
+$input-border-color: #dcdfe6;
+$form-item-margin-bottom: 22px;
+
+// ====other
+$box-shadow-normal: 0 3px 20px 0 rgba(0, 0, 0, 0.3);

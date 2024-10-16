@@ -1,0 +1,32 @@
+@use '../common/index.scss' as *;
+
+.ellipsis {
+  @include ellipsis();
+  &.inline-block {
+    display: inline-block;
+  }
+}
+
+.line_two_point {
+  /* 第二行出现省略号 */
+  display: -webkit-box;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: normal;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.underline {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+  cursor: pointer;
+}
+
+.do-scrollbar {
+  @include doScrollbar();
+}
+
+.do-small-scrollbar {
+  @include doScrollbar(4px, 4px);
+}

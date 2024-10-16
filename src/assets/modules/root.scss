@@ -1,0 +1,43 @@
+/* color palette from <https://github.com/vuejs/theme> */
+:root {
+  --ext-font-family-regular: PingFangSC-Regular, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+  --ext-font-family-medium: PingFangSC-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+  --ext-font-family-semibold: PingFangSC-Semibold, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto,
+  Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB, sans-serif;
+  --ext-font-family-din: DIN-Bold, PingFangSC-Medium, -apple-system, BlinkMacSystemFont, 'Segoe UI',
+  Roboto, Helvetica Neue, Tahoma, PingFang SC, Microsoft Yahei, Arial, Hiragino Sans GB,
+  sans-serif;
+
+  --ext-font-family: var(--ext-font-family-regular);
+
+  --ext-white: #ffffff;
+  --ext-white-soft: #f8f8f8;
+  --ext-white-mute: #f2f2f2;
+
+  --ext-black: #181818;
+  --ext-black-soft: #222222;
+  --ext-black-mute: #282828;
+
+  --ext-gray: #888888;
+  --ext-light-gray: #f1f1f1;
+
+  --ext-green: hsla(160, 100%, 37%, 1);
+  --ext-green-bg: hsla(160, 100%, 37%, 0.2);
+
+  --ext-blue: #3376de;
+  --ext-blue-bg: hsla(219, 95%, 75%, 0.2);
+
+  --ext-divider-light-1: rgba(60, 60, 60, 0.29);
+  --ext-divider-light-2: rgba(60, 60, 60, 0.12);
+  --ext-divider-dark-1: rgba(84, 84, 84, 0.65);
+  --ext-divider-dark-2: rgba(84, 84, 84, 0.48);
+}
+
+:root {
+  --ext-color-border: var(--ext-divider-light-2);
+  --ext-color-border-hover: var(--ext-divider-light-1);
+
+  --ext-color-text: #404040;
+}

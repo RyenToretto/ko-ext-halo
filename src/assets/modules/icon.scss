@@ -1,0 +1,10 @@
+.do-icon {
+  width: 1em;
+  font-size: inherit;
+  color: inherit;
+  > span {
+    font-size: 12px;
+    line-height: 1;
+    transform: translateY(1px);
+  }
+}
